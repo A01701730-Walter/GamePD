@@ -2,7 +2,7 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-21/05/2020
+26/05/2020
 */
 
 /* GamePD es un servicio de streaming para jugar a cientos de 

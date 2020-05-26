@@ -2,7 +2,7 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-21/05/2020
+26/05/2020
 */
 
 /*En esta clase se crean los juegos a partir de herencia de la clase "Juego"*/
@@ -79,7 +79,7 @@ public:
 	string get_resumen() { // Funcion para regresar genero
 		return resumen;
 	}
-	virtual string to_string() = 0; // Funcion para convertir atributos a string
+	virtual string to_string() = 0; // Funcion para convertir atributos a string (Polimorsfismo)
 
 	virtual string to_stringEXT() = 0; // Funcion para convertir atributos a string (extendida)
 

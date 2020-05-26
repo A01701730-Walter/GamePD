@@ -2,7 +2,7 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-21/05/2020
+26/05/2020
 */
 
 /*En esta clase "Biblioteca" se crea un catalogo que contiene
@@ -71,7 +71,7 @@ public:
 			cout << Catalogo[i]->to_string();
 	}
 
-	void crea_ejemplo() { // Funcion para crear ejemplos de varios juegos
+	void crea_ejemplo() { // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
 		Catalogo[Titulos] = new Shooter("Fortnite", 9);
 		Titulos++;
 		Catalogo[Titulos] = new Shooter("Call of Duty", 8);
@@ -87,7 +87,7 @@ public:
 			cout << Catalogo[i]->to_stringEXT();
 	}
 
-	void crea_ejemploEXT() { // Funcion para crear ejemplos de varios juegos
+	void crea_ejemploEXT() { // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
 		Catalogo[Titulos] = new Shooter("Fortnite", 9, " Si", " Battle Royale", 40);
 		Titulos++;
 		Catalogo[Titulos] = new Shooter("Call of Duty", 8, "Si", " FPS", 50);
