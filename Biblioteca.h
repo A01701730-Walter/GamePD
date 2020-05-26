@@ -98,7 +98,6 @@ public:
 		Titulos++;
 	}
 	
-
 	void clear_catalogo() {
 		Titulos = 0;
 		Catalogo[Titulos] = 0;

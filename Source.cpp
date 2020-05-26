@@ -41,12 +41,12 @@ int main(){
 	Biblioteca.muestra_CatalogoEXT(); // Muestra catalogo actualizado con info extra
 	cout << " ------------------------" "\n" "\n";
 	cout << " Juego con informacion completa y espacio requerido con dlcs o expansiones" << "\n" "\n";
-	Shooter C("Call of Duty", 9, "Si", " BR", 50);
-	C.calcula_espacio(50, 60);
-	cout << C.to_stringEXT();
-	RPG W("World of Warcraft", 9, "Si", " MMORPG", 30);
-	W.calcula_espacio(30, 30, 5);
-	cout << W.to_stringEXT();
+	Shooter C("Call of Duty", 9, "Si", " BR", 50); // Crea ejemplo de shooter
+	C.calcula_espacio(50, 60); // Calcula el espacio base + dlc
+	cout << C.to_stringEXT(); // Imprime
+	RPG W("World of Warcraft", 9, "Si", " MMORPG", 30); // Crea ejemplo de rpg
+	W.calcula_espacio(30, 30, 5); // Calcula el espacio base + expansiones + perfiles
+	cout << W.to_stringEXT(); // Imprime
 	cout << " ------------------------" "\n" "\n";
 	return 0;
 }
