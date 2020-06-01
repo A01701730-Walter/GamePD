@@ -2,14 +2,14 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-26/05/2020
+01/06/2020
 */
 
 /* GamePD es un servicio de streaming para jugar a cientos de 
 videojuegos sin necesidad de comprarlos con solo pagar una suscripcion.
 Este programa crea una biblioteca de juegos y muestra el ejemplo de
-4 juegos con su titulo, rating y genero. En proximos entregables se 
-añadiran funcionalidades.*/
+4 juegos con su titulo, rating y genero. Después se generan varios catálogos
+agregando juegos y mostrando más información*/
 
 // Se agregan las bibliotecas y clases
 #include<iostream>
@@ -47,6 +47,6 @@ int main(){
 	RPG W("World of Warcraft", 9, "Si", " MMORPG", 30); // Crea ejemplo de rpg
 	W.calcula_espacio(30, 30, 5); // Calcula el espacio base + expansiones + perfiles
 	cout << W.to_stringEXT(); // Imprime
-	cout << " ------------------------" "\n" "\n";
+	cout << " ------------------------" "\n" "\n";	
 	return 0;
 }

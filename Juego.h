@@ -2,10 +2,10 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-26/05/2020
+01/06/2020
 */
 
-/*En esta clase se crean los juegos a partir de herencia de la clase "Juego"*/
+//En esta clase se crean los juegos a partir de herencia de la clase "Juego", esta clase es abstracta
 
 #pragma once
 #include <iostream>

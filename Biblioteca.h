@@ -2,7 +2,7 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-26/05/2020
+01/06/2020
 */
 
 /*En esta clase "Biblioteca" se crea un catalogo que contiene
