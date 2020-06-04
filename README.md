@@ -1,4 +1,3 @@
-[![Run on Repl.it](https://repl.it/badge/github/A01701730-Walter/GamePD)](https://repl.it/github/A01701730-Walter/GamePD)
 # GamePD
 
 Walter Humphrey Uribe 
