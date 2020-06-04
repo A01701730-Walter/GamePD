@@ -8,8 +8,8 @@ A01701730
 /* GamePD es un servicio de streaming para jugar a cientos de 
 videojuegos sin necesidad de comprarlos con solo pagar una suscripcion.
 Este programa crea una biblioteca de juegos y muestra el ejemplo de
-4 juegos con su titulo, rating y genero. DespuÈs se generan varios cat·logos
-agregando juegos y mostrando m·s informaciÛn*/
+4 juegos con su titulo, rating y genero. Despu√©s se generan varios cat√°logos
+agregando juegos y mostrando m√°s informaci√≥n*/
 
 // Se agregan las bibliotecas y clases
 #include<iostream>
