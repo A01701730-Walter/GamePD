@@ -2,15 +2,13 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-01/06/2020
+06/06/2020
 */
 
 /*En esta clase "Biblioteca" se crea un catalogo que contiene
 todos los juegos disponibles en la plataforma.*/
 
 #pragma once
-#ifndef BIBLIOTECA_H_
-#define BIBLIOTECA_H_
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -28,79 +26,100 @@ private:
 
 // Se declaran metodos
 public:
-	Biblioteca() : Titulos(0) {}; // Constructor default
-	
-	void agrega_shooter(string name, int stars) { // Funcion que agrega juegos shooter
-		Catalogo[Titulos] = new Shooter(name, stars);
-		Titulos++;
+	Biblioteca() : Titulos(0), Catalogo() {}; // Constructor default
 
-	}
-	
-	void agrega_rpg(string name, int stars) { // Funcion que agrega juegos rpg
-		Catalogo[Titulos] = new RPG(name, stars);
-		Titulos++;
+	void agrega_shooter(string name, int stars); // Funcion que agrega juegos shooter
 
-	}
-	
-	void agrega_sport(string name, int stars) { // Funcion que agrega juegos sport
-		Catalogo[Titulos] = new Sport(name, stars);
-		Titulos++;
+	void agrega_rpg(string name, int stars); // Funcion que agrega juegos rpg
 
-	}
+	void agrega_sport(string name, int stars); // Funcion que agrega juegos sport
 
-	void agrega_shooterEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos shooter
-		Catalogo[Titulos] = new Shooter(name, stars, mp, res, gb);
-		Titulos++;
+	void agrega_shooterEXT(string name, int stars, string mp, string res, int gb); // Funcion que agrega juegos shooter
 
-	}
+	void agrega_rpgEXT(string name, int stars, string mp, string res, int gb); // Funcion que agrega juegos rpg
 
-	void agrega_rpgEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos rpg
-		Catalogo[Titulos] = new RPG(name, stars, mp, res, gb);
-		Titulos++;
+	void agrega_sportEXT(string name, int stars, string mp, string res, int gb); // Funcion que agrega juegos sport
 
-	}
+	void muestra_Catalogo(); // Funcion que muestra (imprime) el catalogo
 
-	void agrega_sportEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos sport
-		Catalogo[Titulos] = new Sport(name, stars, mp, res, gb);
-		Titulos++;
+	void crea_ejemplo(); // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
 
-	}
+	void muestra_CatalogoEXT(); // Funcion que muestra (imprime) el catalogo
 
-	void muestra_Catalogo() { // Funcion que muestra (imprime) el catalogo
-		for (int i = 0; i < Titulos; i++)
-			cout << Catalogo[i]->to_string();
-	}
+	void crea_ejemploEXT(); // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
 
-	void crea_ejemplo() { // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
-		Catalogo[Titulos] = new Shooter("Fortnite", 9);
-		Titulos++;
-		Catalogo[Titulos] = new Shooter("Call of Duty", 8);
-		Titulos++;
-		Catalogo[Titulos] = new RPG("World of Warcraft", 9);
-		Titulos++;
-		Catalogo[Titulos] = new Sport("FIFA 20", 7);
-		Titulos++;
-	}
-
-	void muestra_CatalogoEXT() { // Funcion que muestra (imprime) el catalogo
-		for (int i = 0; i < Titulos; i++)
-			cout << Catalogo[i]->to_stringEXT();
-	}
-
-	void crea_ejemploEXT() { // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
-		Catalogo[Titulos] = new Shooter("Fortnite", 9, " Si", " Battle Royale", 40);
-		Titulos++;
-		Catalogo[Titulos] = new Shooter("Call of Duty", 8, "Si", " FPS", 50);
-		Titulos++;
-		Catalogo[Titulos] = new RPG("World of Warcraft", 9, "Si", " MMORPG", 30);
-		Titulos++;
-		Catalogo[Titulos] = new Sport("FIFA 20", 7, "Si", " Futbol soccer", 25);
-		Titulos++;
-	}
-	
-	void clear_catalogo() {
-		Titulos = 0;
-		Catalogo[Titulos] = 0;
-	}
+	void clear_catalogo(); // Funcion para limpiar el catalogo
 };
-#endif
+
+void Biblioteca::agrega_shooter(string name, int stars) { // Funcion que agrega juegos shooter
+	Catalogo[Titulos] = new Shooter(name, stars);
+	Titulos++;
+
+}
+
+void Biblioteca::agrega_rpg(string name, int stars) { // Funcion que agrega juegos rpg
+	Catalogo[Titulos] = new RPG(name, stars);
+	Titulos++;
+
+}
+
+void Biblioteca::agrega_sport(string name, int stars) { // Funcion que agrega juegos sport
+	Catalogo[Titulos] = new Sport(name, stars);
+	Titulos++;
+
+}
+
+void Biblioteca::agrega_shooterEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos shooter
+	Catalogo[Titulos] = new Shooter(name, stars, mp, res, gb);
+	Titulos++;
+
+}
+
+void Biblioteca::agrega_rpgEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos rpg
+	Catalogo[Titulos] = new RPG(name, stars, mp, res, gb);
+	Titulos++;
+
+}
+
+void Biblioteca::agrega_sportEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos sport
+	Catalogo[Titulos] = new Sport(name, stars, mp, res, gb);
+	Titulos++;
+
+}
+
+void Biblioteca::muestra_Catalogo() { // Funcion que muestra (imprime) el catalogo
+	for (int i = 0; i < Titulos; i++)
+		cout << Catalogo[i]->to_string();
+}
+
+void Biblioteca::crea_ejemplo() { // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
+	Catalogo[Titulos] = new Shooter("Fortnite", 9);
+	Titulos++;
+	Catalogo[Titulos] = new Shooter("Call of Duty", 8);
+	Titulos++;
+	Catalogo[Titulos] = new RPG("World of Warcraft", 9);
+	Titulos++;
+	Catalogo[Titulos] = new Sport("FIFA 20", 7);
+	Titulos++;
+}
+
+void Biblioteca::muestra_CatalogoEXT() { // Funcion que muestra (imprime) el catalogo
+	for (int i = 0; i < Titulos; i++)
+		cout << Catalogo[i]->to_stringEXT();
+}
+
+void Biblioteca::crea_ejemploEXT() { // Funcion para crear ejemplos de varios juegos en tiempo de ejecucion con polimorfismo
+	Catalogo[Titulos] = new Shooter("Fortnite", 9, " Si", " Battle Royale", 40);
+	Titulos++;
+	Catalogo[Titulos] = new Shooter("Call of Duty", 8, "Si", " FPS", 50);
+	Titulos++;
+	Catalogo[Titulos] = new RPG("World of Warcraft", 9, "Si", " MMORPG", 30);
+	Titulos++;
+	Catalogo[Titulos] = new Sport("FIFA 20", 7, "Si", " Futbol soccer", 25);
+	Titulos++;
+}
+
+void Biblioteca::clear_catalogo() { // Funcion que limpia el catalogo
+	Titulos = 0;
+	Catalogo[Titulos] = 0;
+}
