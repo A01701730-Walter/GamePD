@@ -13,3 +13,5 @@ GamePD es un servicio de streaming para jugar cientos de
 videojuegos sin necesidad de comprarlos con solo pagar una suscripcion.
 El programa despliega un menu con diversas interacciones como mostrar el
 catalogo y agregar un juego de cualquier género.
+
+NOTA: En las opciones de agregar juegos, ingrese el nombre del juego sin espacios.
