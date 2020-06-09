@@ -22,7 +22,7 @@ class Biblioteca { // Se crea la classe de Biblioteca
 // Se declaran atributos
 private:
 	int Titulos;// Variable de titulos (cantidad de juegos)
-	Juego* Catalogo[MAX]; // Se define como apuntador 
+	Juego* Catalogo[MAX]; // El catalogo donde se agregaran los juegos 
 
 // Se declaran metodos
 public:
@@ -51,37 +51,37 @@ public:
 	void clear_catalogo(); // Funcion para limpiar el catalogo
 };
 
-void Biblioteca::agrega_shooter(string name, int stars) { // Funcion que agrega juegos shooter
+void Biblioteca::agrega_shooter(string name, int stars) { // Funcion que agrega juegos shooter a catalogo y aumenta el contador de titulos
 	Catalogo[Titulos] = new Shooter(name, stars);
 	Titulos++;
 
 }
 
-void Biblioteca::agrega_rpg(string name, int stars) { // Funcion que agrega juegos rpg
+void Biblioteca::agrega_rpg(string name, int stars) { // Funcion que agrega juegos rpg a catalogo y aumenta el contador de titulos
 	Catalogo[Titulos] = new RPG(name, stars);
 	Titulos++;
 
 }
 
-void Biblioteca::agrega_sport(string name, int stars) { // Funcion que agrega juegos sport
+void Biblioteca::agrega_sport(string name, int stars) { // Funcion que agrega juegos sport a catalogo y aumenta el contador de titulos
 	Catalogo[Titulos] = new Sport(name, stars);
 	Titulos++;
 
 }
 
-void Biblioteca::agrega_shooterEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos shooter
+void Biblioteca::agrega_shooterEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos shooter a catalogo y aumenta el contador de titulos
 	Catalogo[Titulos] = new Shooter(name, stars, mp, res, gb);
 	Titulos++;
 
 }
 
-void Biblioteca::agrega_rpgEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos rpg
+void Biblioteca::agrega_rpgEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos rpg a catalogo y aumenta el contador de titulos
 	Catalogo[Titulos] = new RPG(name, stars, mp, res, gb);
 	Titulos++;
 
 }
 
-void Biblioteca::agrega_sportEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos sport
+void Biblioteca::agrega_sportEXT(string name, int stars, string mp, string res, int gb) { // Funcion que agrega juegos sport a catalogo y aumenta el contador de titulos
 	Catalogo[Titulos] = new Sport(name, stars, mp, res, gb);
 	Titulos++;
 

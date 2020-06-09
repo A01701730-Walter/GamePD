@@ -63,7 +63,7 @@ Juego::Juego(string name, int stars, string genre) { // Se declara el constructo
 		genero = genre;
 }
 
-Juego::Juego(string name, int stars, string genre, string mp, string res, int gb) { // Se sobrecarga el constructor 
+Juego::Juego(string name, int stars, string genre, string mp, string res, int gb) { // Se sobrecarga el constructor, muestra informacion extendida
 		nombre = name;
 		rating = stars;
 		genero = genre;
@@ -119,7 +119,7 @@ public:
 
 	} 
 
-	RPG(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "RPG", mp, res, gb) { // Se declara el constructor con sobrecarga
+	RPG(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "RPG", mp, res, gb) { // Se declara el constructor con sobrecarga, muestra informacion extendida
 
 	}
 
@@ -160,7 +160,7 @@ public:
 
 	}
 
-	Sport(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "Sport", mp, res, gb) { // Se declara el constructor con sobrecarga
+	Sport(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "Sport", mp, res, gb) { // Se declara el constructor con sobrecarga, muestra informacion extendida
 
 	}
 

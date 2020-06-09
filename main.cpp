@@ -53,9 +53,9 @@ int main(){
 			case 3:
 				Biblioteca.crea_ejemplo(); // Crea un catalogo con 4 juegos de ejemplo
 				cout << " Nombre: ";
-				cin >> name; // NOMBRE SIN ESPACIOS
+				cin >> name;
 				cout << " Rating: ";
-				cin >> stars; // Rating 0-10
+				cin >> stars;
 				Biblioteca.agrega_shooter(name, stars); // Agrega 1 juego shooter
 				cout << "\n" " Catalogo: " "\n" "\n";
 				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
@@ -65,9 +65,9 @@ int main(){
 			case 4:
 				Biblioteca.crea_ejemplo(); // Crea un catalogo con 4 juegos de ejemplo
 				cout << " Nombre: ";
-				cin >> name; // NOMBRE SIN ESPACIOS
+				cin >> name;
 				cout << " Rating: ";
-				cin >> stars; // Rating 0-10
+				cin >> stars;
 				Biblioteca.agrega_rpg(name, stars); // Agrega 1 juego rpg
 				cout << "\n" " Catalogo: " "\n" "\n";
 				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
@@ -77,9 +77,9 @@ int main(){
 			case 5:
 				Biblioteca.crea_ejemplo(); // Crea un catalogo con 4 juegos de ejemplo
 				cout << " Nombre: ";
-				cin >> name; // NOMBRE SIN ESPACIOS
+				cin >> name;
 				cout << " Rating: ";
-				cin >> stars; // Rating 0-10
+				cin >> stars;
 				Biblioteca.agrega_sport(name, stars); // Agrega 1 juego sport
 				cout << "\n" " Catalogo: " "\n" "\n";
 				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
