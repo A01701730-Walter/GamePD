@@ -14,6 +14,8 @@ sin necesidad de comprarlos con solo pagar una suscripcion.
 GamePD tiene un catálogo con videojuegos de 3 distintos géneros:
 shooter, rpg y sport.
 
+# Funcionalidad
+
 El programa despliega un menú con 6 opciones: Mostrar catalogo base simple, 
 Mostrar catalogo base extendido, Agregar Shooter, Agrega RPG, Agrega Sport y Salir.
 
