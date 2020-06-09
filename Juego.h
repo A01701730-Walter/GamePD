@@ -2,7 +2,7 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-06/06/2020
+09/06/2020
 */
 
 //En esta clase se crean los juegos a partir de herencia de la clase "Juego", esta clase es abstracta
@@ -25,45 +25,62 @@ protected:
 
 	// Se declaran los metodos
 public:
-	Juego(string name, int stars, string genre); // Constructor
+	// Constructor
+	Juego(string name, int stars, string genre); 
 
-	Juego(string name, int stars, string genre, string mp, string res, int gb); // Sobrecarga de constructor
+	// Sobrecarga de constructor (atributos extra)
+	Juego(string name, int stars, string genre, string mp, string res, int gb); 
 	
-	void set_nombre(string name) { nombre = name; } // Funcion para dar nombre
+	// Funcion que recibe string y lo establece como atributo de nombre
+	void set_nombre(string name) { nombre = name; } 
 
-	void set_rating(int stars) { rating = stars; } // Funcion para dar rating
+	// Funcion que recibe un entero y lo establece como atributo de rating
+	void set_rating(int stars) { rating = stars; } 
 
-	void set_genero(string genre) { genero = genre; } // Funcion para dar genero
+	// Funcion que recibe un string y lo establece como atributo de genero
+	void set_genero(string genre) { genero = genre; } 
 
-	void set_multi(string mp) { multi = mp; } // Funcion para dar genero
+	// Funcion que recibe un string y lo establece como atributo de multijugador
+	void set_multi(string mp) { multi = mp; } 
 
-	void set_resumen(string res) { multi = res; } // Funcion para dar genero
+	// Funcion que recibe un string y lo establece como atributo de resumen
+	void set_resumen(string res) { multi = res; } 
 
-	string get_nombre() { return nombre; } // Funcion para regresar nombre
+	// Funcion para regresar un string de atributo nombre
+	string get_nombre() { return nombre; } 
 
-	int get_rating() { return rating; } // Funcion para regresar rating
+	// Funcion para regresar un entero de atributo rating
+	int get_rating() { return rating; } 
 
-	string get_genero() { return genero; } // Funcion para regresar genero
+	// Funcion para regresar un string de atributo genero
+	string get_genero() { return genero; } 
 
-	string get_multi() { return multi; } // Funcion para regresar genero
+	// Funcion para regresar un string de atributo multijugador
+	string get_multi() { return multi; } 
 
-	string get_resumen() { return resumen; } // Funcion para regresar genero
+	// Funcion para regresar un string de atributo resumen
+	string get_resumen() { return resumen; } 
 
-	virtual string to_string() = 0; // Funcion para convertir atributos a string (Polimorsfismo)
-
-	virtual string to_stringEXT() = 0; // Funcion para convertir atributos a string (extendida)
-
-	int calcula_espacio() { return espacio; }; // Funcion para calcular el espacio (sobreescritura)
+	// Funcion para convertir atributos a string (Polimorsfismo)
+	virtual string to_string() = 0; 
+	
+	// Funcion para convertir atributos a string (extendida)
+	virtual string to_stringEXT() = 0; 
+	
+	// Funcion para calcular el espacio (sobreescritura)
+	int calcula_espacio() { return espacio; }; 
 
 };
 
-Juego::Juego(string name, int stars, string genre) { // Se declara el constructor 
+// Se declara el constructor 
+Juego::Juego(string name, int stars, string genre) { 
 		nombre = name;
 		rating = stars;
 		genero = genre;
 }
 
-Juego::Juego(string name, int stars, string genre, string mp, string res, int gb) { // Se sobrecarga el constructor, muestra informacion extendida
+// Constructor con atributos extra
+Juego::Juego(string name, int stars, string genre, string mp, string res, int gb) { 
 		nombre = name;
 		rating = stars;
 		genero = genre;
@@ -72,24 +89,30 @@ Juego::Juego(string name, int stars, string genre, string mp, string res, int gb
 		espacio = gb;
 }
 
-class Shooter : public Juego { // Se crea la clase shooter
+// Se crea la clase shooter
+class Shooter : public Juego { 
 public:
-	Shooter(string name, int stars) : Juego(name, stars, "Shooter") { // Se declara el constructor 
+	// Se declara el constructor 
+	Shooter(string name, int stars) : Juego(name, stars, "Shooter") { 
 
 	}
-
-	Shooter(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "Shooter", mp, res, gb) { // Se declara el constructor con sobrecarga
+	
+	// Constructor con atributos extra
+	Shooter(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "Shooter", mp, res, gb) { 
 
 	}
-
-	string to_string(); // Funcion para regresar nombre, rating y genero 
-
-	string to_stringEXT(); // Funcion para regresar nombre, rating, genero y pequeña descripción (extendida)
-
-	int calcula_espacio(int base, int dlc); // Calcula espacio (sobreescritura)
+	// Funcion que convierte atributos a string (nombre, rating y genero) 
+	string to_string(); 
+	
+	// Funcion pque convierte atributos a string (nombre, rating,  genero, multijugador, espacio y pequeña descripción)
+	string to_stringEXT(); 
+	
+	// Calcula espacio (sobreescritura)
+	int calcula_espacio(int base, int dlc); 
 };
 
-string Shooter::to_string() { // Funcion para regresar nombre, rating y genero 
+// Funcion que concatena valores de atributos y los regresa en forma de string para poder ser impresos
+string Shooter::to_string() { 
 	stringstream aux;
 	aux << " Nombre: " << nombre << "\n"
 		<< " Rating: " << rating << "\n"
@@ -97,7 +120,8 @@ string Shooter::to_string() { // Funcion para regresar nombre, rating y genero
 	return aux.str();
 }
 
-string Shooter::to_stringEXT() { // Funcion para regresar nombre, rating, genero y pequeña descripción (extendida)
+// Funcion que concatena valores de atributos (extendido) y los regresa en forma de string para poder ser impresos
+string Shooter::to_stringEXT() { 
 	stringstream aux;
 	aux << " Nombre: " << nombre << "\n"
 		<< " Rating: " << rating << "\n"
@@ -108,29 +132,37 @@ string Shooter::to_stringEXT() { // Funcion para regresar nombre, rating, genero
 	return aux.str();
 }
 
-int Shooter::calcula_espacio(int base, int dlc) { // Calcula espacio, suma el peso del juego base mas dlcs
+// Calcula y regresa el espacio. Recibe el peso del juego base y los dlcs y los suma
+int Shooter::calcula_espacio(int base, int dlc) { 
 	espacio = base + dlc;
 	return espacio;
 }
 
-class RPG : public Juego { // Se crea la clase rpg
+// Se crea la clase rpg
+class RPG : public Juego { 
 public:
-	RPG(string name, int stars) : Juego(name, stars, "RPG") { // Se declara el constructor 
+	// Se declara el constructor 
+	RPG(string name, int stars) : Juego(name, stars, "RPG") { 
 
 	} 
-
-	RPG(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "RPG", mp, res, gb) { // Se declara el constructor con sobrecarga, muestra informacion extendida
+	
+	// Se declara el constructor con sobrecarga (atributos extra)
+	RPG(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "RPG", mp, res, gb) { 
 
 	}
-
-	string to_string(); // Funcion para regresar nombre, rating y genero 
-
-	string to_stringEXT(); // Funcion para regresar nombre, rating, genero y pequeña descripción (extendida)
-
-	int calcula_espacio(int base, int expansiones, int perfiles); // Calcula espacio (sobreescritura)
+	
+	// Funcion que convierte atributos a string (nombre, rating y genero)
+	string to_string(); 
+	
+	// Funcion pque convierte atributos a string (nombre, rating,  genero, multijugador, espacio y pequeña descripción)
+	string to_stringEXT(); 
+	
+	// Calcula espacio (sobreescritura)
+	int calcula_espacio(int base, int expansiones, int perfiles); 
 };
 
-string RPG::to_string() { // Funcion para regresar nombre, rating y genero 
+// Funcion que concatena valores de atributos y los regresa en forma de string para poder ser impresos 
+string RPG::to_string() { 
 	stringstream aux;
 	aux << " Nombre: " << nombre << "\n"
 		<< " Rating: " << rating << "\n"
@@ -138,7 +170,8 @@ string RPG::to_string() { // Funcion para regresar nombre, rating y genero
 	return aux.str();
 }
 
-string RPG::to_stringEXT() { // Funcion para regresar nombre, rating, genero y pequeña descripción (extendida)
+// Funcion que concatena valores de atributos (extendido) y los regresa en forma de string para poder ser impresos
+string RPG::to_stringEXT() { 
 	stringstream aux;
 	aux << " Nombre: " << nombre << "\n"
 		<< " Rating: " << rating << "\n"
@@ -149,29 +182,36 @@ string RPG::to_stringEXT() { // Funcion para regresar nombre, rating, genero y p
 	return aux.str();
 }
 
-int RPG::calcula_espacio(int base, int expansiones, int perfiles) { // Calcula espacio, suma el peso del juego base mas expansiones y perfiles
+// Calcula y regresa el espacio espacio. Recibe el peso del juego base, expansiones y perfiles y los suma
+int RPG::calcula_espacio(int base, int expansiones, int perfiles) { 
 	espacio = base + expansiones + perfiles;
 	return espacio;
 }
 
-class Sport : public Juego { // Se crea la clase sport
+// Se crea la clase sport
+class Sport : public Juego { 
 public:
-	Sport(string name, int stars) : Juego(name, stars, "Sport") { // Se declara el constructor 
+	// Se declara el constructor 
+	Sport(string name, int stars) : Juego(name, stars, "Sport") { 
 
 	}
-
-	Sport(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "Sport", mp, res, gb) { // Se declara el constructor con sobrecarga, muestra informacion extendida
+	// Se declara el constructor con sobrecarga (atributos extra)
+	Sport(string name, int stars, string mp, string res, int gb) : Juego(name, stars, "Sport", mp, res, gb) { 
 
 	}
-
-	string to_string(); // Funcion para regresar nombre, rating y genero
-
-	string to_stringEXT(); // Funcion para regresar nombre, rating, genero y pequeña descripción (extendida)
-
-	int calcula_espacio(int base); // Calcula espacio (sobreescritura)
+	
+	// Funcion que convierte atributos a string (nombre, rating y genero)
+	string to_string(); 
+	
+	// Funcion para regresar nombre, rating, genero y pequeña descripción (extendida)
+	string to_stringEXT(); 
+	
+	// Calcula espacio (sobreescritura)
+	int calcula_espacio(int base); 
 };
 
-string Sport::to_string() { // Funcion para regresar nombre, rating y genero
+// Funcion que concatena valores de atributos y los regresa en forma de string para poder ser impresos
+string Sport::to_string() { 
 	stringstream aux;
 	aux << " Nombre: " << nombre << "\n"
 		<< " Rating: " << rating << "\n"
@@ -179,7 +219,8 @@ string Sport::to_string() { // Funcion para regresar nombre, rating y genero
 	return aux.str();
 }
 
-string Sport::to_stringEXT() { // Funcion para regresar nombre, rating, genero y pequeña descripción (extendida)
+// Funcion que concatena valores de atributos (extendido) y los regresa en forma de string para poder ser impresos
+string Sport::to_stringEXT() { 
 	stringstream aux;
 	aux << " Nombre: " << nombre << "\n"
 		<< " Rating: " << rating << "\n"
@@ -190,7 +231,8 @@ string Sport::to_stringEXT() { // Funcion para regresar nombre, rating, genero y
 	return aux.str();
 }
 
-int Sport::calcula_espacio(int base) { // Calcula espacio que es el juego base
+// Recibe el espacio del juego base y lo regresa
+int Sport::calcula_espacio(int base) { 
 	espacio = base;
 	return espacio;
 }

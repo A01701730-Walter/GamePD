@@ -2,7 +2,7 @@
 Proyecto GamePD
 Walter Humphrey
 A01701730
-06/06/2020
+09/06/2020
 */
 
 /* GamePD es un servicio de streaming para jugar cientos de 
@@ -18,12 +18,12 @@ catalogo y agregar un juego de cualquier genero. */
 using namespace std;
 
 int main(){
-	Biblioteca Biblioteca; 
+	Biblioteca Biblioteca; // Inicia objeto Biblioteca
 	bool salir = false;
 
-	while (salir == false) {
+	while (salir == false) { // Empieza ciclo
 		int opcion;
-		cout << "          GamePD         " "\n";
+		cout << "          GamePD         " "\n"; // Impresion del menu
 		cout << " ------------------------" "\n";
 		cout << " - Menu - " "\n";
 		cout << "1. Mostrar catalogo base simple" "\n";
@@ -56,10 +56,10 @@ int main(){
 				cin >> name;
 				cout << " Rating: ";
 				cin >> stars;
-				Biblioteca.agrega_shooter(name, stars); // Agrega 1 juego shooter
+				Biblioteca.agrega_shooter(name, stars); // Agrega 1 juego shooter con los atributos recibidos
 				cout << "\n" " Catalogo: " "\n" "\n";
 				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
-				salir = true;
+				salir = true; // Cierra el programa
 				break;
 
 			case 4:
@@ -68,10 +68,10 @@ int main(){
 				cin >> name;
 				cout << " Rating: ";
 				cin >> stars;
-				Biblioteca.agrega_rpg(name, stars); // Agrega 1 juego rpg
+				Biblioteca.agrega_rpg(name, stars); // Agrega 1 juego rpg con los atributos recibidos
 				cout << "\n" " Catalogo: " "\n" "\n";
 				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
-				salir = true;
+				salir = true; // Cierra el programa
 				break;
 
 			case 5:
@@ -80,14 +80,14 @@ int main(){
 				cin >> name;
 				cout << " Rating: ";
 				cin >> stars;
-				Biblioteca.agrega_sport(name, stars); // Agrega 1 juego sport
+				Biblioteca.agrega_sport(name, stars); // Agrega 1 juego sport con los atributos recibidos
 				cout << "\n" " Catalogo: " "\n" "\n";
 				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
-				salir = true;
+				salir = true; // Cierra el programa
 				break;
 
 			case 6:
-				salir = true;
+				salir = true; // Cierra el programa
 				break;
 		}
 	}
