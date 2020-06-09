@@ -18,6 +18,7 @@ El programa despliega un menú con 6 opciones: Mostrar catálogo base simple,
 Mostrar catálogo base extendido, Agregar Shooter, Agrega RPG, Agrega Sport y Salir.
 
 ## Consideraciones
-Se incluyó un botón para correr el código directamente en ripl.it.
+Se incluyó un botón para correr el código directamente en ripl.it. Existen setters y gettes que
+estan implementados para poder usarlos a futuro.
 
 NOTA: En las opciones de agregar juegos, ingrese el nombre del juego sin espacios.
