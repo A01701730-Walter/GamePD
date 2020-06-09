@@ -23,4 +23,5 @@ Mostrar catálogo base extendido, Agregar Shooter, Agrega RPG, Agrega Sport y Sa
 
 ## Consideraciones
 Se incluyó un botón para correr el código directamente en ripl.it.
+
 NOTA: En las opciones de agregar juegos, ingrese el nombre del juego sin espacios.
