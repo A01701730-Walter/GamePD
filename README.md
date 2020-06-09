@@ -11,6 +11,7 @@ Programación orientada a objetos Gpo.2
 
 GamePD es un servicio de streaming para jugar cientos de 
 videojuegos sin necesidad de comprarlos con solo pagar una suscripcion.
+GamePD tiene videojuegos de 3 distintos géneros: shooter, rpg y sport.
 El programa despliega un menu con diversas interacciones como mostrar el
 catalogo y agregar un juego de cualquier género.
 
