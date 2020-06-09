@@ -3,11 +3,7 @@
 
 # GamePD
 
-Walter Humphrey Uribe 
-
-A01701730 
-
-Programación orientada a objetos Gpo.2 
+Walter Humphrey Uribe // A01701730 // Programación orientada a objetos Gpo.2 
 
 GamePD es un servicio de streaming para jugar cientos de videojuegos
 sin necesidad de comprarlos con solo pagar una suscripcion.
