@@ -1,14 +1,16 @@
 /*
-Proyecto GamePD
-Walter Humphrey
-A01701730
-09/06/2020
+* Proyecto GamePD
+* Walter Humphrey
+* A01701730
+* 10/06/2020
 */
 
-/* GamePD es un servicio de streaming para jugar cientos de 
-videojuegos sin necesidad de comprarlos con solo pagar una suscripcion.
-El programa despliega un menu con diversas interacciones como mostrar el
-catalogo y agregar un juego de cualquier genero. */
+/* 
+*	GamePD es un servicio de streaming para jugar cientos de 
+*	videojuegos sin necesidad de comprarlos con solo pagar una suscripcion.
+*	El programa despliega un menu con diversas interacciones como mostrar el
+*	catalogo y agregar un juego de cualquier genero.
+*/
 
 // Se agregan las bibliotecas y clases
 #include<iostream>
@@ -18,7 +20,7 @@ catalogo y agregar un juego de cualquier genero. */
 using namespace std;
 
 int main(){
-	Biblioteca Biblioteca; // Inicia objeto Biblioteca
+	Biblioteca Biblioteca; // Crea objeto Biblioteca
 	bool salir = false;
 
 	while (salir == false) { // Empieza ciclo
@@ -39,55 +41,55 @@ int main(){
 
 		switch (opcion) {
 			case 1:
-				Biblioteca.clear_catalogo(); // Limpia catalogo
-				Biblioteca.crea_ejemplo(); // Crea un catalogo con 4 juegos de ejemplo
-				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
+				Biblioteca.clear_catalogo(); 
+				Biblioteca.crea_ejemplo(); 
+				Biblioteca.muestra_Catalogo(); 
 				break;
 
 			case 2:
-				Biblioteca.clear_catalogo(); // Limpia catalogo
-				Biblioteca.crea_ejemploEXT(); // Crea catalogo con los 4 juegos de ejemplo pero con info extra
-				Biblioteca.muestra_CatalogoEXT(); // Muestra catalogo con info extra
+				Biblioteca.clear_catalogo(); 
+				Biblioteca.crea_ejemploEXT(); 
+				Biblioteca.muestra_CatalogoEXT(); 
 				break;
 			
 			case 3:
-				Biblioteca.crea_ejemplo(); // Crea un catalogo con 4 juegos de ejemplo
+				Biblioteca.crea_ejemplo(); 
 				cout << " Nombre: ";
 				cin >> name;
 				cout << " Rating: ";
 				cin >> stars;
-				Biblioteca.agrega_shooter(name, stars); // Agrega 1 juego shooter con los atributos recibidos
+				Biblioteca.agrega_shooter(name, stars); 
 				cout << "\n" " Catalogo: " "\n" "\n";
-				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
-				salir = true; // Cierra el programa
+				Biblioteca.muestra_Catalogo(); 
+				salir = true; 
 				break;
 
 			case 4:
-				Biblioteca.crea_ejemplo(); // Crea un catalogo con 4 juegos de ejemplo
+				Biblioteca.crea_ejemplo(); 
 				cout << " Nombre: ";
 				cin >> name;
 				cout << " Rating: ";
 				cin >> stars;
-				Biblioteca.agrega_rpg(name, stars); // Agrega 1 juego rpg con los atributos recibidos
+				Biblioteca.agrega_rpg(name, stars);
 				cout << "\n" " Catalogo: " "\n" "\n";
-				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
-				salir = true; // Cierra el programa
+				Biblioteca.muestra_Catalogo();
+				salir = true;
 				break;
 
 			case 5:
-				Biblioteca.crea_ejemplo(); // Crea un catalogo con 4 juegos de ejemplo
+				Biblioteca.crea_ejemplo();
 				cout << " Nombre: ";
 				cin >> name;
 				cout << " Rating: ";
 				cin >> stars;
-				Biblioteca.agrega_sport(name, stars); // Agrega 1 juego sport con los atributos recibidos
+				Biblioteca.agrega_sport(name, stars);
 				cout << "\n" " Catalogo: " "\n" "\n";
-				Biblioteca.muestra_Catalogo(); // Imprime el catalogo
-				salir = true; // Cierra el programa
+				Biblioteca.muestra_Catalogo();
+				salir = true;
 				break;
 
 			case 6:
-				salir = true; // Cierra el programa
+				salir = true;
 				break;
 		}
 	}
